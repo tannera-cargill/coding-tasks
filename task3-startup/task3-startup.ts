@@ -5,6 +5,7 @@
  * Let's refactor it to run in the following order:
  * loadConfig() -> initSingleton() -> startReactApp() -> finalize()
  * */
+import "./dependency"
 
 const loadConfig = () => {
     console.log("Config loaded");
