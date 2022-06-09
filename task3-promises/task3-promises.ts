@@ -24,17 +24,19 @@ export const tokenGetter = () => {
  * Refactor the below code to run taskA() and taskB() concurrently in the executor.
  * */
 
-async function callA() {
-  console.log("callA ran");
+function callA() {
+  return Promise.resolve('resultA')
 }
 
-async function callB() {
-  console.log("callB ran");
+function callB() {
+  return Promise.resolve('resultB')
 }
 
-const executorPart2 = () => {
-  callA();
-  callB();
+const executorPart2 = async () => {
+ const resultA = await callA();
+  const resultB = await callB();
+
+  return [resultA, resultB]
 };
 
 /**

@@ -13,7 +13,7 @@ function process(text: string | null): string | null {
     return null;
   }
 
-  return text.replace(/f/g, "p");
+  return text.toUpperCase();
 }
 
 /**
