@@ -4,6 +4,7 @@
  * promises instead.
  * */
 
+// refactor this
 function taskA(onFinished: (token: string) => string) {
   const getToken = () => Promise.resolve("abc");
   return getToken().then((value) => {
@@ -11,10 +12,12 @@ function taskA(onFinished: (token: string) => string) {
   });
 }
 
+// leave taskB untouched.
 function taskB(token: string) {
   return token;
 }
 
+// refactor this
 export const tokenGetter = () => {
   return taskA((value) => taskB(value));
 };
