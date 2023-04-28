@@ -1,5 +1,23 @@
 /**
+ * Preliminary question: What is Logged?
+ **/
+
+async function asyncFunction() {
+  const firstValue = 10;
+  const secondValue = await new Promise((resolve) => setTimeout(resolve, 3000));
+
+  console.log(firstValue, secondValue);
+}
+asyncFunction();
+
+/**
  * Part 1:
+ * Refactor the above function to use only Promises, and no async await,
+ * whilst keeping exactly the same behaviour.
+ * */
+
+/**
+ * Part 2:
  * Lets refactor the below snippet to remove the onFinished callback from taskA() and use
  * promises instead.
  * */
@@ -23,30 +41,29 @@ export const tokenGetter = () => {
 };
 
 /**
- * Part 2:
+ * Part 3:
  * Refactor the below code to run taskA() and taskB() concurrently in the executor.
  * */
 
 function callA() {
-  return Promise.resolve('resultA')
+  return Promise.resolve("resultA");
 }
 
 function callB() {
-  return Promise.resolve('resultB')
+  return Promise.resolve("resultB");
 }
 
-const executorPart2 = async () => {
- const resultA = await callA();
+const executorPart3 = async () => {
+  const resultA = await callA();
   const resultB = await callB();
 
-  return [resultA, resultB]
+  return [resultA, resultB];
 };
 
 /**
- * Part 3:
+ * Part 4:
  * Lets refactor tokenGetterFunc() to make it more reusable by allowing us to provide a different getToken() function.
  * */
-
 async function tokenGetterFunc() {
   const getToken = () => Promise.resolve("abc");
   let token;

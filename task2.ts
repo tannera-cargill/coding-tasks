@@ -8,7 +8,7 @@
  * refactor process() to return an Error instead of null when given null, with strict typings.
  * */
 
-function process(text: string | null): string | null {
+function processA(text: string | null): string | null {
   if (text === null) {
     return null;
   }

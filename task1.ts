@@ -12,11 +12,9 @@
  * - 'insurance' account
  **/
 
-
 /** *
  * Add typings here
  */
-
 
 /**
  * Part 2.
