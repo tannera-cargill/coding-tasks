@@ -19,12 +19,12 @@
 /**
  * Part 2.
  * Let's enrich our models,
- * When it is a "current" account it has a 'currentAmount': number field.
- * When it is a "savings" account it has a 'savingsAmount': number field.
- * When it is an "insurance" account it has a 'insuranceAmount': number field.
+ * When it is an account of type 'current': it has a 'currentAmount': number field.
+ * When it is an account of type 'savings': it has a 'savingsAmount': number field.
+ * When it is an account of type 'insurance': it has a 'insuranceAmount': number field.
  *
- * Let's implement a "getUnderlyingAmount(account: Account): number" function which returns:
- * - currentAmount when given a CurrentAccount as input.
- * - savingsAmount when given a SavingsAccount as input.
- * - insuranceAmount when given an InsuranceAccount as input.
+ * Let's implement a "getUnderlyingAmount(account)" function which returns:
+ * - currentAmount when given an account that is of type 'current' as input.
+ * - savingsAmount when given an account that is of type 'savings' as input.
+ * - insuranceAmount when given an account that is of type 'insurance' as input.
  **/
