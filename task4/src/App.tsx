@@ -11,6 +11,16 @@ import { Button } from './Button';
  *
  * */
 
+/**
+ * 
+ * Part 3 (note: Part 2 is in Button.tsx):
+ * Let's retrieve data from:
+ * https://api.sampleapis.com/futurama/characters
+ * 
+ * Lets render the first and last names of the characters in a list.
+ * 
+ */
+
 export function App() {
   return (
     <div>
